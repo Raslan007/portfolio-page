@@ -4,15 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>صفحة رسلان الشخصية</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav class="navbar">
+    <div class="nav-container">
+        <a href="#" class="nav-logo">
+    <img src="favicon-32x32.png" alt="Raslan Logo">
+</a>
+        <ul class="nav-menu">
+            <li><a href="#about">نبذة عني</a></li>
+            <li><a href="#skills">المهارات</a></li>
+            <li><a href="#projects">المشاريع</a></li>
+            <li><a href="#contact">تواصل معي</a></li>
+        </ul>
+    </div>
+</nav>
     <header>
-        <h1>مرحباً بكم في صفحتي</h1>
         <img src="images/profile.jpeg" alt="صورة رسلان">
+        <h1>مرحباً، أنا رسلان</h1>
+        <p class="hero-title">مطور Full Stack | Python & Web Development</p>
+        <p class="hero-subtitle">أبني مواقع ويب احترافية وأنظمة إدارية متكاملة تحوّل أفكارك إلى واقع</p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">شوف مشاريعي</a>
+            <a href="#contact" class="btn btn-secondary">تواصل معي</a>
+        </div>
     </header>
-    <p>مطور Full Stack...</p>
-<section>
+<section class="about" id="about">
+    <h2>نبذة عني</h2>
+    <p>مرحباً! أنا <strong>رسلان</strong>، مطور Full Stack متخصص في بناء تطبيقات ويب كاملة.</p>
+    <p>أمتلك خبرة قوية في <strong>Python</strong> و <strong>Flask</strong> لتطوير الـ Backend، وأقوم حالياً بتوسيع مهاراتي في الـ Frontend باستخدام أحدث تقنيات الويب.</p>
+    <p>من أحدث مشاريعي: <strong>Payment Approval System</strong> - نظام متكامل لإدارة الموافقات المالية باستخدام Python/Flask، يتضمن صلاحيات متعددة (RBAC) وسير عمل تلقائي (Workflows).</p>
+    <p>أبحث عن فرص لتطوير مواقع ويب احترافية للشركات والأفراد.</p>
+</section>
+<section id="skills">
     <h2>مهاراتي</h2>
     <ul>
         <li>Python</li>
@@ -21,7 +50,32 @@
         <li>Git و GitHub</li>
     </ul>
 </section>
-<section>
+<section class="projects" id="projects">
+    <h2>مشاريعي</h2>
+    
+    <div class="project-card">
+        <h3>Payment Approval System</h3>
+        <p class="project-type">نظام ويب متكامل | Python & Flask</p>
+        <p>نظام احترافي لإدارة الموافقات المالية في الشركات. يسمح للموظفين بتقديم طلبات الدفع، ويقوم المدراء بمراجعتها والموافقة عليها بناءً على صلاحيات محددة.</p>
+        
+        <h4>المميزات التقنية:</h4>
+        <ul class="project-features">
+            <li>نظام صلاحيات متعددة (RBAC)</li>
+            <li>تنظيم الكود باستخدام Flask Blueprints</li>
+            <li>سير عمل تلقائي للموافقات (Workflows)</li>
+            <li>قاعدة بيانات PostgreSQL</li>
+            <li>واجهة إدارة للمديرين</li>
+        </ul>
+        
+        <div class="project-tech">
+            <span>Python</span>
+            <span>Flask</span>
+            <span>PostgreSQL</span>
+            <span>RBAC</span>
+        </div>
+    </div>
+</section>
+<section id="contact">
     <h2>تواصل معي</h2>
     <form>
         <label for="name">الاسم:</label>
@@ -37,7 +91,13 @@
     </form>
 </section>
 <footer>
-    <p>صفحتي على GitHub: <a href="https://github.com/Raslan007" target="_blank" rel="noopener">اضغط هنا</a></p>
+    <p>تواصل معي عبر:</p>
+    <div class="social-links">
+        <a href="https://github.com/Raslan007" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:ahmedraslan9777@gmail.com">البريد الإلكتروني</a>
+        <a href="https://wa.me/201099997924" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <p class="copyright">&copy; 2026 رسلان - جميع الحقوق محفوظة</p>
 </footer>
 </body>
 </html>
