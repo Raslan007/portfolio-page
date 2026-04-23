@@ -250,6 +250,18 @@ const translations = {
         footerEmail: "البريد الإلكتروني",
         footerWhatsapp: "WhatsApp",
         footerCopyright: "© 2026 رسلان - جميع الحقوق محفوظة",
+
+        // Testimonials Section
+        testimonialsTitle: "آراء العملاء",
+        testimonial1Text: "\"رسلان مطور محترف جداً، سلّمني الموقع في الميعاد وبجودة ممتازة. تواصله سريع وواضح، أنصح بالتعامل معه.\"",
+        testimonial1Name: "أحمد حسن",
+        testimonial1Role: "صاحب شركة ناشئة",
+        testimonial2Text: "\"شغل نظيف واحترافي. طلبت منه موقع لشركتي ولاقيت كل اللي متوقعه وأكتر. الـ Contact Form شغال ممتاز.\"",
+        testimonial2Name: "سارة محمد",
+        testimonial2Role: "مديرة تسويق",
+        testimonial3Text: "\"تعاملت معاه على نظام إدارة داخلي بـ Python و Flask، والنتيجة كانت فوق التوقعات. سرعة استجابة ممتازة وفهم دقيق للمتطلبات.\"",
+        testimonial3Name: "كريم علي",
+        testimonial3Role: "مهندس برمجيات",
         
         // Language Button
         langBtn: "EN"
@@ -313,6 +325,18 @@ const translations = {
         footerEmail: "Email",
         footerWhatsapp: "WhatsApp",
         footerCopyright: "© 2026 Raslan - All Rights Reserved",
+
+        // Testimonials Section
+        testimonialsTitle: "Client Testimonials",
+        testimonial1Text: "\"Raslan is a highly professional developer. He delivered the website on time with excellent quality. His communication is fast and clear. Highly recommended.\"",
+        testimonial1Name: "Ahmed Hassan",
+        testimonial1Role: "Startup Founder",
+        testimonial2Text: "\"Clean and professional work. I requested a website for my company and got exactly what I expected and more. The Contact Form works perfectly.\"",
+        testimonial2Name: "Sarah Mohamed",
+        testimonial2Role: "Marketing Manager",
+        testimonial3Text: "\"Worked with him on an internal management system using Python and Flask, and the result exceeded expectations. Fast response time and precise understanding of requirements.\"",
+        testimonial3Name: "Karim Ali",
+        testimonial3Role: "Software Engineer",
         
         // Language Button
         langBtn: "عربي"
