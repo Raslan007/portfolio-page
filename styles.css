@@ -600,3 +600,215 @@ header img:hover {
 .nav-menu a:hover::after {
     width: 100%;
 }
+/* ========================================
+   Change Title Button
+   ======================================== */
+
+.change-title-btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.change-title-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+}
+/* ========================================
+   Form Validation Styles
+   ======================================== */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 13px;
+    font-weight: bold;
+    min-height: 18px;
+}
+
+input.error,
+textarea.error {
+    border: 2px solid #e74c3c;
+    background-color: #fff5f5;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    border-right: 4px solid #28a745;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    display: none;
+}
+
+.success-message.show {
+    display: block;
+    animation: fadeInUp 0.5s ease-out;
+}
+/* ========================================
+   Scroll to Top Button (Modern Style)
+   ======================================== */
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    width: 42px;
+    height: 42px;
+    background-color: #2c3e50;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+    padding: 0;
+    
+    /* مخفي افتراضياً */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.8);
+}
+
+.scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+/* SVG Icon داخل الزرار */
+.scroll-top-btn svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect - Modern */
+.scroll-top-btn:hover {
+    background-color: #3498db;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+}
+
+.scroll-top-btn:hover svg {
+    transform: translateY(-2px);
+}
+
+/* Active Effect - لما المستخدم يضغط */
+.scroll-top-btn:active {
+    transform: translateY(0) scale(0.95);
+}
+/* ========================================
+   Language Switcher Button
+   ======================================== */
+
+.lang-switch-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid #3498db;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: auto;
+    font-family: Arial, sans-serif;
+}
+
+.lang-switch-btn:hover {
+    background-color: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+}
+
+.lang-switch-btn:active {
+    transform: translateY(0);
+}
+
+.lang-switch-btn svg {
+    flex-shrink: 0;
+}
+
+.lang-switch-btn span {
+    letter-spacing: 1px;
+}
+/* ========================================
+   RTL/LTR Direction Fixes
+   ======================================== */
+
+/* لما اللغة إنجليزي (LTR) */
+html[dir="ltr"] .about {
+    text-align: left;
+}
+
+html[dir="ltr"] .projects .project-card {
+    border-right: none;
+    border-left: 4px solid #3498db;
+}
+
+html[dir="ltr"] .project-features {
+    padding-right: 0;
+    padding-left: 20px;
+    text-align: left;
+}
+
+html[dir="ltr"] .success-message {
+    border-right: none;
+    border-left: 4px solid #28a745;
+    text-align: center;
+}
+
+/* Scroll to Top - في اليمين في LTR */
+html[dir="ltr"] .scroll-top-btn {
+    left: auto;
+    right: 25px;
+}
+
+/* Form labels في اليسار */
+html[dir="ltr"] label {
+    text-align: left;
+}
+
+html[dir="ltr"] input,
+html[dir="ltr"] textarea {
+    text-align: left;
+    direction: ltr;
+}
+
+/* Error messages في اليسار */
+html[dir="ltr"] .error-message {
+    text-align: left;
+}
+
+/* Copyright - في المنتصف */
+html[dir="ltr"] .copyright {
+    text-align: center;
+}
+
+/* Smooth transition عند تغيير اللغة */
+body {
+    transition: all 0.3s ease;
+}

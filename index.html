@@ -14,35 +14,51 @@
     <nav class="navbar">
     <div class="nav-container">
         <a href="#" class="nav-logo">
-    <img src="favicon-32x32.png" alt="Raslan Logo">
-</a>
+            <img src="favicon-32x32.png" alt="Raslan Logo">
+        </a>
+        
+        <!-- Language Switcher Button -->
+        <button id="lang-switch-btn" class="lang-switch-btn" aria-label="Switch Language">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span id="lang-btn-text">EN</span>
+        </button>
+        
         <ul class="nav-menu">
-            <li><a href="#about">نبذة عني</a></li>
-            <li><a href="#skills">المهارات</a></li>
-            <li><a href="#projects">المشاريع</a></li>
-            <li><a href="#contact">تواصل معي</a></li>
+            <li><a href="#about" data-i18n="navAbout">نبذة عني</a></li>
+            <li><a href="#skills" data-i18n="navSkills">المهارات</a></li>
+            <li><a href="#projects" data-i18n="navProjects">المشاريع</a></li>
+            <li><a href="#contact" data-i18n="navContact">تواصل معي</a></li>
         </ul>
     </div>
 </nav>
     <header>
         <img src="images/profile.jpeg" alt="صورة رسلان">
-        <h1>مرحباً، أنا رسلان</h1>
-        <p class="hero-title">مطور Full Stack | Python & Web Development</p>
-        <p class="hero-subtitle">أبني مواقع ويب احترافية وأنظمة إدارية متكاملة تحوّل أفكارك إلى واقع</p>
+        <h1 id="hero-title" data-i18n="heroTitle">مرحباً، أنا رسلان</h1>
+        <p class="hero-title" data-i18n="heroSubtitle">مطور Full Stack | Python & Web Development</p>
+        <p class="hero-subtitle" data-i18n="heroDescription">أبني مواقع ويب احترافية وأنظمة إدارية متكاملة تحوّل أفكارك إلى واقع</p>
         <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">شوف مشاريعي</a>
-            <a href="#contact" class="btn btn-secondary">تواصل معي</a>
+            <a href="#projects" class="btn btn-primary" data-i18n="heroBtnProjects">شوف مشاريعي</a>
+            <a href="#contact" class="btn btn-secondary" data-i18n="heroBtnContact">تواصل معي</a>
         </div>
+        <button id="change-title-btn" class="change-title-btn" data-i18n="heroBtnChangeTitle">
+            🎨 غيّر العنوان
+        </button>
     </header>
+
 <section class="about" id="about">
-    <h2>نبذة عني</h2>
-    <p>مرحباً! أنا <strong>رسلان</strong>، مطور Full Stack متخصص في بناء تطبيقات ويب كاملة.</p>
-    <p>أمتلك خبرة قوية في <strong>Python</strong> و <strong>Flask</strong> لتطوير الـ Backend، وأقوم حالياً بتوسيع مهاراتي في الـ Frontend باستخدام أحدث تقنيات الويب.</p>
-    <p>من أحدث مشاريعي: <strong>Payment Approval System</strong> - نظام متكامل لإدارة الموافقات المالية باستخدام Python/Flask، يتضمن صلاحيات متعددة (RBAC) وسير عمل تلقائي (Workflows).</p>
-    <p>أبحث عن فرص لتطوير مواقع ويب احترافية للشركات والأفراد.</p>
+    <h2 data-i18n="aboutTitle">نبذة عني</h2>
+    <p><span data-i18n="aboutP1Pre">مرحباً! أنا </span><strong data-i18n="aboutP1Name">رسلان</strong><span data-i18n="aboutP1Post">، مطور Full Stack متخصص في بناء تطبيقات ويب كاملة.</span></p>
+    <p><span data-i18n="aboutP2Pre">أمتلك خبرة قوية في </span><strong data-i18n="aboutP2Python">Python</strong><span data-i18n="aboutP2And"> و </span><strong data-i18n="aboutP2Flask">Flask</strong><span data-i18n="aboutP2Post"> لتطوير الـ Backend، وأقوم حالياً بتوسيع مهاراتي في الـ Frontend باستخدام أحدث تقنيات الويب.</span></p>
+    <p><span data-i18n="aboutP3Pre">من أحدث مشاريعي: </span><strong data-i18n="aboutP3Project">Payment Approval System</strong><span data-i18n="aboutP3Post"> - نظام متكامل لإدارة الموافقات المالية باستخدام Python/Flask، يتضمن صلاحيات متعددة (RBAC) وسير عمل تلقائي (Workflows).</span></p>
+    <p data-i18n="aboutP4">أبحث عن فرص لتطوير مواقع ويب احترافية للشركات والأفراد.</p>
 </section>
+
 <section id="skills">
-    <h2>مهاراتي</h2>
+    <h2 data-i18n="skillsTitle">مهاراتي</h2>
     <ul>
         <li>Python</li>
         <li>Flask</li>
@@ -51,20 +67,20 @@
     </ul>
 </section>
 <section class="projects" id="projects">
-    <h2>مشاريعي</h2>
+    <h2 data-i18n="projectsTitle">مشاريعي</h2>
     
     <div class="project-card">
-        <h3>Payment Approval System</h3>
-        <p class="project-type">نظام ويب متكامل | Python & Flask</p>
-        <p>نظام احترافي لإدارة الموافقات المالية في الشركات. يسمح للموظفين بتقديم طلبات الدفع، ويقوم المدراء بمراجعتها والموافقة عليها بناءً على صلاحيات محددة.</p>
+        <h3 data-i18n="projectName">Payment Approval System</h3>
+        <p class="project-type" data-i18n="projectType">نظام ويب متكامل | Python & Flask</p>
+        <p data-i18n="projectDescription">نظام احترافي لإدارة الموافقات المالية في الشركات. يسمح للموظفين بتقديم طلبات الدفع، ويقوم المدراء بمراجعتها والموافقة عليها بناءً على صلاحيات محددة.</p>
         
-        <h4>المميزات التقنية:</h4>
+        <h4 data-i18n="projectFeaturesTitle">المميزات التقنية:</h4>
         <ul class="project-features">
-            <li>نظام صلاحيات متعددة (RBAC)</li>
-            <li>تنظيم الكود باستخدام Flask Blueprints</li>
-            <li>سير عمل تلقائي للموافقات (Workflows)</li>
-            <li>قاعدة بيانات PostgreSQL</li>
-            <li>واجهة إدارة للمديرين</li>
+            <li data-i18n="projectFeature1">نظام صلاحيات متعددة (RBAC)</li>
+            <li data-i18n="projectFeature2">تنظيم الكود باستخدام Flask Blueprints</li>
+            <li data-i18n="projectFeature3">سير عمل تلقائي للموافقات (Workflows)</li>
+            <li data-i18n="projectFeature4">قاعدة بيانات PostgreSQL</li>
+            <li data-i18n="projectFeature5">واجهة إدارة للمديرين</li>
         </ul>
         
         <div class="project-tech">
@@ -76,28 +92,50 @@
     </div>
 </section>
 <section id="contact">
-    <h2>تواصل معي</h2>
-    <form>
-        <label for="name">الاسم:</label>
-        <input type="text" id="name" name="name">
+    <h2 data-i18n="contactTitle">تواصل معي</h2>
+    
+    <form id="contact-form" novalidate>
+        <div class="form-group">
+            <label for="name" data-i18n="contactName">الاسم:</label>
+            <input type="text" id="name" name="name">
+            <span class="error-message" id="name-error"></span>
+        </div>
         
-        <label for="email">البريد الإلكتروني:</label>
-        <input type="email" id="email" name="email">
+        <div class="form-group">
+            <label for="email" data-i18n="contactEmail">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email">
+            <span class="error-message" id="email-error"></span>
+        </div>
         
-        <label for="message">الرسالة:</label>
-        <textarea id="message" name="message"></textarea>
+        <div class="form-group">
+            <label for="message" data-i18n="contactMessage">الرسالة:</label>
+            <textarea id="message" name="message"></textarea>
+            <span class="error-message" id="message-error"></span>
+        </div>
         
-        <button type="submit">إرسال</button>
+        <button type="submit" data-i18n="contactSubmit">إرسال</button>
+        
+        <div id="success-message" class="success-message"></div>
     </form>
 </section>
 <footer>
-    <p>تواصل معي عبر:</p>
+    <p data-i18n="footerContact">تواصل معي عبر:</p>
     <div class="social-links">
-        <a href="https://github.com/Raslan007" target="_blank" rel="noopener">GitHub</a>
-        <a href="mailto:ahmedraslan9777@gmail.com">البريد الإلكتروني</a>
-        <a href="https://wa.me/201099997924" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://github.com/Raslan007" target="_blank" rel="noopener" data-i18n="footerGithub">GitHub</a>
+        <a href="mailto:ahmedraslan9777@gmail.com" data-i18n="footerEmail">البريد الإلكتروني</a>
+        <a href="https://wa.me/201099997924" target="_blank" rel="noopener" data-i18n="footerWhatsapp">WhatsApp</a>
     </div>
-    <p class="copyright">&copy; 2026 رسلان - جميع الحقوق محفوظة</p>
+    <p class="copyright" data-i18n="footerCopyright">&copy; 2026 رسلان - جميع الحقوق محفوظة</p>
 </footer>
+<!-- Scroll to Top Button -->
+<button id="scroll-top-btn" class="scroll-top-btn" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+</button>
+
+<!-- EmailJS Library -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
